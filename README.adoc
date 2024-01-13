@@ -1,0 +1,24 @@
+= zpu-bench
+
+----
+// https://godbolt.org/
+//
+long countdown(long n) {
+    while (n) {
+        n -= 1;
+    }
+    return n;
+}
+----
+
+----
+countDownToZero:
+        testq   %rdi, %rdi
+        je      .L2
+.L3:
+        subq    $1, %rdi
+        jne     .L3
+.L2:
+        movl    $0, %eax
+        ret
+----
