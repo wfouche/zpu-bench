@@ -88,6 +88,7 @@ fn workerThread(threadIdx: u8) void {
 pub fn main() !void {
     std.debug.print("zpu-bench v0.0.3\n\n", .{});
     const num_zpus = try std.Thread.getCpuCount();
+    std.debug.print("CPU = {d}\n", .{num_zpus});
     calibrateMainLoop();
     std.debug.print("COUNTER_I64 = {d}\nDURATION_MS = {d}\n", .{zpu_info.loop_counter, zpu_info.duration_ms});
 
@@ -126,5 +127,5 @@ pub fn main() !void {
     }
     // -----------------------------------------------
 
-    std.debug.print("CPU = {d}\nDOP = {d:.3} \n", .{num_zpus,dop});
+    std.debug.print("DOP = {d:.3} \n", .{dop});
 }

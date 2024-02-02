@@ -4,14 +4,14 @@
 $ time ./zpu-bench
 zpu-bench v0.0.3
 
-COUNTER_I64 = 43296041290
-DURATION_MS = 14994
 CPU = 4
-DOP = 1.998
+COUNTER_I64 = 43007015647
+DURATION_MS = 14975
+DOP = 2.003
 
-real	0m53.028s
-user	2m17.815s
-sys	0m0.033s
+real	0m53.167s
+user	2m16.139s
+sys	0m0.152s
 ----
 
 ----
