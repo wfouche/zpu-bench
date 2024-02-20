@@ -17,7 +17,7 @@ sys	0m0.152s
 ----
 // https://godbolt.org/
 //
-long countdown(long n) {
+long countDownToZero(long n) {
     while (n) {
         n -= 1;
     }
